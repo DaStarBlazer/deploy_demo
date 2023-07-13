@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.get("/", function(req, res){
     res.render('home');
 })
-
+app.use(express.static(__dirname + "/public"));
 
 app.get("/about", function(req, res){
     res.render('about');
